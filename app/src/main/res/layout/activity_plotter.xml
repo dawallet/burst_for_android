@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlotterActivity"
+    android:theme="@style/AppTheme.AppBarOverlay"
+    android:background="@color/background_floating_material_dark">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:text="Plots"
+        android:id="@+id/txtTitlePlots"
+        android:layout_weight="0.03"
+        android:layout_gravity="top"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:theme="@style/AppTheme.AppBarOverlay" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Storage Information"
+        android:id="@+id/txtDriveLabel"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/txtTitlePlots"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="X.XXGB Free Of X.XXGB Total"
+        android:id="@+id/txtDriveInfo"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:layout_below="@+id/txtDriveLabel"
+        android:layout_centerHorizontal="true"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/barDriveUseage"
+        android:minHeight="60dip"
+        android:maxHeight="60dip"
+        android:progressTint="#65e433"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_below="@+id/txtDriveInfo"
+        android:layout_alignLeft="@+id/txtDriveInfo"
+        android:layout_alignStart="@+id/txtDriveInfo"
+        android:layout_alignRight="@+id/txtDriveInfo"
+        android:layout_alignEnd="@+id/txtDriveInfo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Drive Message Holder"
+        android:id="@+id/txtDriveMessage"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:layout_below="@+id/barDriveUseage"
+        android:layout_centerHorizontal="true" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Free Memory xxMB of xxMB"
+        android:id="@+id/txtTestHolder"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:layout_below="@+id/btnDeletePlot"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+    <!--  -->
+        <!--android:layout_alignStart="@+id/txtDriveLabel"-->
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/setPlotSize"
+        android:layout_below="@+id/txtDriveMessage"
+        android:layout_alignLeft="@+id/barDriveUseage"
+        android:layout_alignStart="@+id/barDriveUseage"
+        android:layout_alignRight="@+id/barDriveUseage"
+        android:layout_alignEnd="@+id/barDriveUseage"
+        android:focusable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Plot 0GB"
+        android:id="@+id/txtPlotGBSize"
+        android:layout_below="@+id/setPlotSize"
+        android:layout_centerHorizontal="true" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="xGB of Plots Exist"
+        android:id="@+id/txtPlotsFound"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/btnPlot"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plot"
+        android:nextFocusDown="@id/setPlotSize"
+        android:minWidth="150dip"
+        android:id="@+id/btnPlot"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:background="@color/colorAccent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:focusable="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete a 1GB Plot"
+        android:id="@+id/btnDeletePlot"
+        android:minWidth="150dip"
+        android:layout_gravity="center_horizontal|bottom"
+        android:singleLine="false"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        style="@style/AppTheme.AppBarOverlay"
+        android:background="@color/colorAccent"
+        android:layout_below="@+id/txtPlotsFound"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:focusable="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        android:id="@+id/btnMinerOp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="82dp"
+        android:layout_alignParentBottom="true"
+        android:singleLine="false"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        style="@style/AppTheme.AppBarOverlay"
+        android:background="@color/colorAccent"
+        android:layout_alignRight="@+id/btnDeletePlot"
+        android:layout_alignEnd="@+id/btnDeletePlot"
+        android:layout_alignLeft="@+id/btnDeletePlot"
+        android:layout_alignStart="@+id/btnDeletePlot"
+        android:focusable="true" />
+
+
+</RelativeLayout>

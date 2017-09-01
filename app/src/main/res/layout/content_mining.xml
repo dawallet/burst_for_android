@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="burstcoin.com.burst.MiningActivity"
+    tools:showIn="@layout/activity_mining">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Mining Plot Size"
+        android:id="@+id/txtStaticPlotSize"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="53dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="xx GB"
+        android:id="@+id/txtGBPlot"
+        android:layout_below="@+id/txtStaticPlotSize"
+        android:layout_centerHorizontal="true" />
+    <!-- Only Visable if pool is not set -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Pool"
+        android:id="@+id/btnSetPool"
+        android:background="@color/colorAccent"
+        android:minWidth="150dip"
+        android:layout_alignBottom="@+id/txtPoolSvr"
+        android:layout_centerHorizontal="true"
+         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Pool Server"
+        android:id="@+id/txtStaticPoolServer"
+        android:layout_below="@+id/txtGBPlot"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="mobile.burst-team.us"
+        android:id="@+id/txtPoolSvr"
+        android:layout_below="@+id/txtStaticPoolServer"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Current Block: Unknown"
+        android:id="@+id/txtCurrentBlock"
+
+        android:layout_marginTop="46dp"
+        android:layout_below="@+id/txtPoolSvr"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Best Deadline: "
+        android:id="@+id/txtStaticCurrentDL"
+        android:layout_below="@+id/txtCurrentBlock"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="N/A"
+        android:id="@+id/txtCurrentDL"
+        android:layout_below="@+id/txtStaticCurrentDL"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ACCEPTED"
+        android:id="@+id/txtStaticAccepted"
+        android:layout_below="@+id/txtCurrentDL"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorAccentPressed"
+        android:textStyle="bold" />
+
+    <!-- Taken out of button below -->
+    <!-- android:text="Start Mining" Set by Code -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="150dip"
+        android:id="@+id/btnMinerOp"
+        android:layout_marginBottom="65dp"
+        android:background="@color/colorAccent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+         />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgMined"
+        android:layout_below="@+id/txtStaticAccepted"
+        android:src="@drawable/mined"
+        android:layout_alignLeft="@+id/btnMinerOp"
+        android:layout_alignStart="@+id/btnMinerOp"
+        android:layout_alignRight="@+id/btnMinerOp"
+        android:layout_alignEnd="@+id/btnMinerOp"
+        android:layout_above="@+id/btnMinerOp" />
+
+</RelativeLayout>

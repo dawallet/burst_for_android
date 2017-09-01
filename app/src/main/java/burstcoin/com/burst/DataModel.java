@@ -1,8 +1,6 @@
 package burstcoin.com.burst;
 
-/**
- * Created by Aiyaz Parmar on 7/4/16.
- */
+
 public class DataModel {
     private String id;
     private String name;
